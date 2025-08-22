@@ -8,15 +8,15 @@ Este projeto foi desenvolvido durante 3 sprints de 1 semana cada, posteriormente
 
 Para executar esse projeto localmente é necessário baixar o repositório, e executá-lo na seguinte ordem:
 
-1.gerador_planilha.py
-2.analise_inicial.py
-3.distribuicao_de_uso.py;
-4.custo_total.py;
-5.uso_mes.py;
-6.quantidade_x_custo.py;
-7.top10.py;
-8.custo_estacao.py;
-9.preparacao_planilha.py;
-10.treino_e_teste.py;
-11.abrir a dashboard via cmd usando o comando 'stremlit run dashboard_maker.py';
+1. gerador_planilha.py
+2. analise_inicial.py
+3. distribuicao_de_uso.py;
+4. custo_total.py;
+5. uso_mes.py;
+6. quantidade_x_custo.py;
+7. top10.py;
+8. custo_estacao.py;
+9. preparacao_planilha.py;
+10. treino_e_teste.py;
+11. Abrir a dashboard via cmd usando o comando 'stremlit run dashboard_maker.py';
 
