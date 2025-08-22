@@ -3,6 +3,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.metrics import mean_squared_error, r2_score
+from sklearn.ensemble import RandomForestRegressor
 import numpy as np
 import datetime
 
@@ -32,7 +33,8 @@ y = df['quantidade_usada']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 # Treinar o modelo de Regressão Linear com os dados de treino
-modelo = LinearRegression()
+# A LINHA ABAIXO FOI ALTERADA PARA USAR Random Forest Regressor
+modelo = RandomForestRegressor(n_estimators=100, random_state=42)
 modelo.fit(X_train, y_train)
 
 # Fazer previsões no conjunto de teste para avaliar a performance
@@ -49,6 +51,7 @@ print("="*50)
 print(f"Erro Quadrático Médio (MSE): {mse:.2f}")
 print(f"Coeficiente de Determinação (R²): {r2:.2f}")
 print("="*50 + "\n")
+
 
 # --- 3. FUNÇÃO PARA FAZER PREVISÕES E GERAR O RELATÓRIO ---
 def gerar_relatorio_de_compra(mes, material, estoque_atual, custo_unitario_atual, estoque_seguranca):
@@ -112,7 +115,7 @@ def gerar_relatorio_de_compra(mes, material, estoque_atual, custo_unitario_atual
 
 # --- 5. EXECUÇÃO DO RELATÓRIO PARA UM CENÁRIO EXEMPLO ---
 # Você pode alterar esses valores para testar diferentes cenários
-mes_de_previsao = 12  # Mês de setembro
+mes_de_previsao = 12  # Mês de dezembro
 material_de_previsao = 'Filamento PLA'
 estoque_atual_do_material = 5
 custo_atual_do_material = 105.00
